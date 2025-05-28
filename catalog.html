@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - TechHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">TechHub</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html" class="active">Catalog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="hero catalog-hero">
+        <div class="hero-content">
+            <h1>Our Products</h1>
+            <p>Discover the Latest in Tech Innovation</p>
+        </div>
+    </header>
+
+    <div class="category-filter">
+        <select id="category-select" class="category-dropdown">
+            <option value="">All Categories</option>
+            <option value="laptops">Laptops</option>
+            <option value="gaming">Gaming Zone</option>
+            <option value="printers">Printers</option>
+            <option value="components">PC Components</option>
+            <option value="peripherals">Peripherals</option>
+            <option value="monitors">Monitors</option>
+            <option value="supplies">Supplies</option>
+            <option value="tablets">Tablets</option>
+            <option value="accessories">Accessories</option>
+            <option value="security">Security</option>
+        </select>
+    </div>
+
+    <main class="catalog-container">
+        <aside class="filters">
+            <h3>Refine Results</h3>
+            <div class="filter-section">
+                <h4>Price Range</h4>
+                <input type="range" min="0" max="3000" value="3000" class="price-range">
+                <div class="price-labels">
+                    <span>$0</span>
+                    <span>$3000</span>
+                </div>
+            </div>
+            <div class="filter-section">
+                <h4>Sort By</h4>
+                <select id="sort-select">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name">Name</option>
+                </select>
+            </div>
+        </aside>
+
+        <section class="products">
+            <div class="product-grid" id="product-grid">
+                <div class="product-card">
+                    <div class="product-badge">Best Seller</div>
+                    <img src="images/products/mouse.jpg" alt="RGB Gaming Mouse">
+                    <h3>RGB Gaming Mouse</h3>
+                    <p class="product-description">16000 DPI, 8 Programmable Buttons</p>
+                    <p class="product-price">$79.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/products/monitor-ultra.jpg" alt="UltraWide Monitor">
+                    <h3>UltraWide 29'' Monitor</h3>
+                    <p class="product-description">2560x1080, 144Hz, 1ms Response</p>
+                    <p class="product-price">$399.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <img src="images/products/laptop-pro.jpg" alt="Professional Laptop">
+                    <h3>Professional Workstation</h3>
+                    <p class="product-description">i9, 64GB RAM, RTX 4090</p>
+                    <p class="product-price">$2,999.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/products/keyboard-mech.jpg" alt="Mechanical Keyboard">
+                    <h3>Pro Mechanical Keyboard</h3>
+                    <p class="product-description">Hot-swappable, PBT Keycaps</p>
+                    <p class="product-price">$149.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">Sale</div>
+                    <img src="images/products/headset-pro.jpg" alt="Professional Headset">
+                    <h3>Pro Gaming Headset</h3>
+                    <p class="product-description">7.1 Surround, Noise Cancelling</p>
+                    <p class="product-price">$129.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/products/tablet.jpg" alt="Drawing Tablet">
+                    <h3>Drawing Tablet Pro</h3>
+                    <p class="product-description">8192 Pressure Levels, Wireless</p>
+                    <p class="product-price">$299.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">Popular</div>
+                    <img src="images/products/webcam.jpg" alt="4K Webcam">
+                    <h3>4K Pro Webcam</h3>
+                    <p class="product-description">60fps, Auto-focus, HDR</p>
+                    <p class="product-price">$199.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/products/router.jpg" alt="Gaming Router">
+                    <h3>Gaming Router</h3>
+                    <p class="product-description">Wi-Fi 6E, Multi-Gig Ports</p>
+                    <p class="product-price">$349.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <img src="images/products/mic.jpg" alt="USB Microphone">
+                    <h3>Studio USB Microphone</h3>
+                    <p class="product-description">24-bit/96kHz, RGB Lighting</p>
+                    <p class="product-price">$159.99</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>TechHub is your trusted destination for premium tech products and expert advice.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Shipping Information</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/filters.js"></script>
+</body>
+</html>
