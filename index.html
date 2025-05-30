@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechHub - Your Ultimate Tech Store</title>
+    <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">TechHub</div>
+        <div class="logo">KaniStick</div>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="catalog.html">Catalogo</a></li>
+            <li><a href="contact.html">Contacto</a></li>
             <li>
                 <a href="cart.html" class="cart-icon">
                     <i class="fas fa-shopping-cart"></i>
@@ -26,15 +27,15 @@
 
     <header class="hero">
         <div class="hero-content">
-            <h1>Welcome to TechHub</h1>
-            <p>Your One-Stop Shop for All Things Tech</p>
-            <a href="catalog.html" class="cta-button">Shop Now</a>
+            <h1>Bienvenido a KaniStick</h1>
+            <p>USA LO MEJOR EN LA MEJOR TIENDA DEL PERÚ</p>
+            <a href="catalog.html" class="cta-button">Compra AHORAA!!!</a>
         </div>
     </header>
 
     <div class="category-filter">
         <select id="category-select" class="category-dropdown">
-            <option value="">All Categories</option>
+            <option value="">Todas las categorias</option>
             <option value="laptops">Laptops</option>
             <option value="gaming">Gaming Zone</option>
             <option value="printers">Printers</option>
@@ -49,83 +50,97 @@
     </div>
 
     <section class="featured-products">
-        <h2>Featured Products</h2>
+        <h2>CHEKEA TODOS NUESTROS PRODUCTOS</h2>
+        <!-- Update the product cards section -->
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-badge">New</div>
-                <img src="images/products/laptop.jpg" alt="Gaming Laptop">
+                <div class="product-image-container">
+                    <img src="img/2.jpg" alt="Gaming Laptop" class="product-image primary">
+                    <img src="img/3.jpg" alt="Gaming Laptop Alternate View" class="product-image secondary">
+                </div>
+                <h3>Pro Gaming Laptop</h3>
+                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD</p>
+                <p class="product-price">$2,499.99</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-badge">Popular</div>
+                <div class="product-image-container">
+                    <img src="img/4.jpg" alt="UltraWide Monitor" class="product-image primary">
+                    <img src="img/5.jpg" alt="UltraWide Monitor Alternate View" class="product-image secondary">
+                </div>
+                <h3>UltraWide 29'' Monitor</h3>
+                <p class="product-description">2560x1080, 144Hz, 1ms Response</p>
+                <p class="product-price">$399.99</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-badge">New</div>
+                <div class="product-image-container">
+                    <img src="img/6.jpg" alt="Gaming Laptop" class="product-image primary">
+                    <img src="img/7.jpg" alt="Gaming Laptop Alternate View" class="product-image secondary">
+                </div>
                 <h3>Pro Gaming Laptop</h3>
                 <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD</p>
                 <p class="product-price">$2,499.99</p>
                 <button class="add-to-cart-btn">Add to Cart</button>
             </div>
             <div class="product-card">
-                <div class="product-badge">Popular</div>
-                <img src="images/products/monitor.jpg" alt="UltraWide Monitor">
-                <h3>UltraWide 29'' Monitor</h3>
-                <p class="product-description">2560x1080, 144Hz, 1ms Response</p>
-                <p class="product-price">$399.99</p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="images/products/mouse.jpg" alt="RGB Gaming Mouse">
-                <h3>RGB Gaming Mouse</h3>
-                <p class="product-description">16000 DPI, 8 Programmable Buttons</p>
-                <p class="product-price">$79.99</p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <div class="product-badge">Sale</div>
-                <img src="images/products/keyboard.jpg" alt="Mechanical Keyboard">
-                <h3>Mechanical Keyboard</h3>
-                <p class="product-description">RGB Backlit, Blue Switches</p>
-                <p class="product-price">$89.99</p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="images/products/headset.jpg" alt="Gaming Headset">
-                <h3>7.1 Gaming Headset</h3>
-                <p class="product-description">Surround Sound, Noise Cancelling</p>
-                <p class="product-price">$129.99</p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <div class="product-badge">Best Seller</div>
-                <img src="images/products/gpu.jpg" alt="Graphics Card">
-                <h3>RTX 4070 GPU</h3>
-                <p class="product-description">12GB GDDR6X, Ray Tracing</p>
-                <p class="product-price">$599.99</p>
-                <button class="add-to-cart-btn">Add to Cart</button>
-            </div>
-            <div class="product-card">
-                <img src="images/products/ssd.jpg" alt="NVMe SSD">
-                <h3>1TB NVMe SSD</h3>
-                <p class="product-description">7000MB/s Read, PCIe 4.0</p>
-                <p class="product-price">$149.99</p>
+                <div class="product-badge">New</div>
+                <div class="product-image-container">
+                    <img src="img/8.jpg" alt="Gaming Laptop" class="product-image primary">
+                    <img src="img/9.jpg" alt="Gaming Laptop Alternate View" class="product-image secondary">
+                </div>
+                <h3>Pro Gaming Laptop</h3>
+                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD</p>
+                <p class="product-price">$2,499.99</p>
                 <button class="add-to-cart-btn">Add to Cart</button>
             </div>
             <div class="product-card">
                 <div class="product-badge">New</div>
-                <img src="images/products/printer.jpg" alt="Laser Printer">
-                <h3>Color Laser Printer</h3>
-                <p class="product-description">Duplex, Wireless, 28ppm</p>
-                <p class="product-price">$299.99</p>
+                <div class="product-image-container">
+                    <img src="img/2.jpg" alt="Gaming Laptop" class="product-image primary">
+                    <img src="img/3.jpg" alt="Gaming Laptop Alternate View" class="product-image secondary">
+                </div>
+                <h3>Pro Gaming Laptop</h3>
+                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD</p>
+                <p class="product-price">$2,499.99</p>
                 <button class="add-to-cart-btn">Add to Cart</button>
             </div>
             <div class="product-card">
                 <div class="product-badge">New</div>
-                <img src="images/products/printer.jpg" alt="Laser Printer">
-                <h3>Color Laser Printer</h3>
-                <p class="product-description">Duplex, Wireless, 28ppm</p>
-                <p class="product-price">$299.99</p>
+                <div class="product-image-container">
+                    <img src="img/4.jpg" alt="Gaming Laptop" class="product-image primary">
+                    <img src="img/5.jpg" alt="Gaming Laptop Alternate View" class="product-image secondary">
+                </div>
+                <h3>Pro Gaming Laptop</h3>
+                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD</p>
+                <p class="product-price">$2,499.99</p>
                 <button class="add-to-cart-btn">Add to Cart</button>
             </div>
             <div class="product-card">
-                <div class="product-badge">DOTA</div>
-                <img src="images/products/printer.jpg" alt="Laser Printer">
-                <h3>Color Laser Printer</h3>
-                <p class="product-description">Duplex, Wireless, 28ppm</p>
-                <p class="product-price">$299.99</p>
+                <div class="product-badge">New</div>
+                <div class="product-image-container">
+                    <img src="img/6.jpg" alt="Gaming Laptop" class="product-image primary">
+                    <img src="img/7.jpg" alt="Gaming Laptop Alternate View" class="product-image secondary">
+                </div>
+                <h3>Pro Gaming Laptop</h3>
+                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD</p>
+                <p class="product-price">$2,499.99</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-badge">New</div>
+                <div class="product-image-container">
+                    <img src="img/2.jpg" alt="Gaming Laptop" class="product-image primary">
+                    <img src="img/3.jpg" alt="Gaming Laptop Alternate View" class="product-image secondary">
+                </div>
+                <h3>Pro Gaming Laptop</h3>
+                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD</p>
+                <p class="product-price">$2,499.99</p>
                 <button class="add-to-cart-btn">Add to Cart</button>
             </div>
         </div>
