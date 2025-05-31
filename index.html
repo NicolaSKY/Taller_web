@@ -3,173 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechHub - Your Ultimate Tech Store</title>
+    <title>Llevate lo ultimo en tecnología</title>
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">KaniStick</div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="catalog.html">Catalogo</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-            <li>
-                <a href="cart.html" class="cart-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
-                </a>
-            </li>
-        </ul>
+    <div class="animated-bg"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">KaniStick</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="catalog.html">Catálogo</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <header class="hero">
         <div class="hero-content">
             <h1>Bienvenido a KaniStick</h1>
-            <p>USA LO MEJOR EN LA MEJOR TIENDA DEL PERÚ</p>
-            <a href="catalog.html" class="cta-button">Compra AHORAA!!!</a>
+            <p>Tu destino tecnológico definitivo - Periféricos gaming de última generación</p>
+            <a href="catalog.html" class="cta-button">¡Explora Ahora!</a>
         </div>
     </header>
 
     <div class="category-filter">
         <select id="category-select" class="category-dropdown">
-            <option value="">Todas las categorias</option>
-            <option value="laptops">Laptops</option>
-            <option value="gaming">Gaming Zone</option>
-            <option value="printers">Printers</option>
-            <option value="components">PC Components</option>
-            <option value="peripherals">Peripherals</option>
-            <option value="monitors">Monitors</option>
-            <option value="supplies">Supplies</option>
+            <option value="">Todas las Categorías</option>
+            <option value="laptops">Laptops Gaming</option>
+            <option value="gaming">Zona Gaming</option>
+            <option value="printers">Impresoras</option>
+            <option value="components">Componentes PC</option>
+            <option value="peripherals">Periféricos</option>
+            <option value="monitors">Monitores</option>
+            <option value="supplies">Accesorios</option>
             <option value="tablets">Tablets</option>
-            <option value="accessories">Accessories</option>
-            <option value="security">Security</option>
+            <option value="security">Seguridad</option>
         </select>
     </div>
 
-    <section class="featured-products">
-        <h2>CHEKEA TODOS NUESTROS PRODUCTOS</h2>
-        <!-- Update the product cards section -->
+    <section class="featured-products" id="catalog">
+        <h2>Productos Destacados</h2>
         <div class="product-grid">
             <div class="product-card">
-                <div class="product-badge">New</div>
-                <div class="product-image-container">
-                    <img src="img/2.jpg" alt="Gaming Laptop" class="product-image primary">
-                    <img src="img/3.jpg" alt="Gaming Laptop Alternate View" class="product-image secondary">
-                </div>
+                <div class="product-badge">Nuevo</div>
+                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&h=300&fit=crop" alt="Gaming Laptop">
                 <h3>Pro Gaming Laptop</h3>
-                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD</p>
+                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD - Rendimiento extremo</p>
                 <p class="product-price">$2,499.99</p>
-                <button class="add-to-cart-btn">Add to Cart</button>
+                <button class="add-to-cart-btn" onclick="addToCart('Pro Gaming Laptop', 2499.99)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
             </div>
-            
+
             <div class="product-card">
                 <div class="product-badge">Popular</div>
-                <div class="product-image-container">
-                    <img src="img/4.jpg" alt="UltraWide Monitor" class="product-image primary">
-                    <img src="img/5.jpg" alt="UltraWide Monitor Alternate View" class="product-image secondary">
-                </div>
-                <h3>UltraWide 29'' Monitor</h3>
-                <p class="product-description">2560x1080, 144Hz, 1ms Response</p>
+                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&h=300&fit=crop" alt="UltraWide Monitor">
+                <h3>Monitor UltraWide 29"</h3>
+                <p class="product-description">2560x1080, 144Hz, 1ms Response - Inmersión total</p>
                 <p class="product-price">$399.99</p>
-                <button class="add-to-cart-btn">Add to Cart</button>
+                <button class="add-to-cart-btn" onclick="addToCart('Monitor UltraWide 29', 399.99)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
             </div>
-            
+
             <div class="product-card">
-                <div class="product-badge">New</div>
-                <div class="product-image-container">
-                    <img src="img/6.jpg" alt="Gaming Laptop" class="product-image primary">
-                    <img src="img/7.jpg" alt="Gaming Laptop Alternate View" class="product-image secondary">
-                </div>
-                <h3>Pro Gaming Laptop</h3>
-                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD</p>
-                <p class="product-price">$2,499.99</p>
-                <button class="add-to-cart-btn">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=400&h=300&fit=crop" alt="RGB Gaming Mouse">
+                <h3>Mouse Gaming RGB</h3>
+                <p class="product-description">16000 DPI, 8 Botones Programables - Precisión máxima</p>
+                <p class="product-price">$79.99</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Mouse Gaming RGB', 79.99)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
             </div>
+
             <div class="product-card">
-                <div class="product-badge">New</div>
-                <div class="product-image-container">
-                    <img src="img/8.jpg" alt="Gaming Laptop" class="product-image primary">
-                    <img src="img/9.jpg" alt="Gaming Laptop Alternate View" class="product-image secondary">
-                </div>
-                <h3>Pro Gaming Laptop</h3>
-                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD</p>
-                <p class="product-price">$2,499.99</p>
-                <button class="add-to-cart-btn">Add to Cart</button>
+                <div class="product-badge">Oferta</div>
+                <img src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=300&fit=crop" alt="Mechanical Keyboard">
+                <h3>Teclado Mecánico</h3>
+                <p class="product-description">RGB, Switches Azules - Experiencia táctil premium</p>
+                <p class="product-price">$89.99</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Teclado Mecánico', 89.99)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
             </div>
+
             <div class="product-card">
-                <div class="product-badge">New</div>
-                <div class="product-image-container">
-                    <img src="img/2.jpg" alt="Gaming Laptop" class="product-image primary">
-                    <img src="img/3.jpg" alt="Gaming Laptop Alternate View" class="product-image secondary">
-                </div>
-                <h3>Pro Gaming Laptop</h3>
-                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD</p>
-                <p class="product-price">$2,499.99</p>
-                <button class="add-to-cart-btn">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&h=300&fit=crop" alt="Gaming Headset">
+                <h3>Headset Gaming 7.1</h3>
+                <p class="product-description">Sonido Envolvente, Cancelación de Ruido</p>
+                <p class="product-price">$129.99</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Headset Gaming 7.1', 129.99)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
             </div>
+
             <div class="product-card">
-                <div class="product-badge">New</div>
-                <div class="product-image-container">
-                    <img src="img/4.jpg" alt="Gaming Laptop" class="product-image primary">
-                    <img src="img/5.jpg" alt="Gaming Laptop Alternate View" class="product-image secondary">
-                </div>
-                <h3>Pro Gaming Laptop</h3>
-                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD</p>
-                <p class="product-price">$2,499.99</p>
-                <button class="add-to-cart-btn">Add to Cart</button>
+                <div class="product-badge">Best Seller</div>
+                <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400&h=300&fit=crop" alt="Graphics Card">
+                <h3>RTX 4070 GPU</h3>
+                <p class="product-description">12GB GDDR6X, Ray Tracing - Gráficos de próxima generación</p>
+                <p class="product-price">$599.99</p>
+                <button class="add-to-cart-btn" onclick="addToCart('RTX 4070 GPU', 599.99)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
             </div>
+
             <div class="product-card">
-                <div class="product-badge">New</div>
-                <div class="product-image-container">
-                    <img src="img/6.jpg" alt="Gaming Laptop" class="product-image primary">
-                    <img src="img/7.jpg" alt="Gaming Laptop Alternate View" class="product-image secondary">
-                </div>
-                <h3>Pro Gaming Laptop</h3>
-                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD</p>
-                <p class="product-price">$2,499.99</p>
-                <button class="add-to-cart-btn">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&h=300&fit=crop" alt="NVMe SSD">
+                <h3>SSD NVMe 1TB</h3>
+                <p class="product-description">7000MB/s Read, PCIe 4.0 - Velocidad extrema</p>
+                <p class="product-price">$149.99</p>
+                <button class="add-to-cart-btn" onclick="addToCart('SSD NVMe 1TB', 149.99)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
             </div>
+
             <div class="product-card">
-                <div class="product-badge">New</div>
-                <div class="product-image-container">
-                    <img src="img/2.jpg" alt="Gaming Laptop" class="product-image primary">
-                    <img src="img/3.jpg" alt="Gaming Laptop Alternate View" class="product-image secondary">
-                </div>
-                <h3>Pro Gaming Laptop</h3>
-                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD</p>
-                <p class="product-price">$2,499.99</p>
-                <button class="add-to-cart-btn">Add to Cart</button>
+                <div class="product-badge">Nuevo</div>
+                <img src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=400&h=300&fit=crop" alt="Laser Printer">
+                <h3>Impresora Láser Color</h3>
+                <p class="product-description">Dúplex, Inalámbrica, 28ppm - Eficiencia profesional</p>
+                <p class="product-price">$299.99</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Impresora Láser Color', 299.99)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer id="contact">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>About Us</h3>
-                <p>TechHub is your trusted destination for premium tech products and expert advice. We're committed to bringing you the latest innovations in technology.</p>
+                <h3>Sobre Nosotros</h3>
+                <p>KaniStick es tu destino confiable para productos tecnológicos premium y asesoramiento experto. Nos comprometemos a traerte las últimas innovaciones en tecnología gaming.</p>
             </div>
             <div class="footer-section">
-                <h3>Quick Links</h3>
+                <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Shipping Information</a></li>
-                    <li><a href="#">Returns & Warranty</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos de Servicio</a></li>
+                    <li><a href="#">Información de Envío</a></li>
+                    <li><a href="#">Devoluciones y Garantía</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Visit Us</h3>
+                <h3>Visítanos</h3>
                 <p>Av. Arequipa 123</p>
-                <p>Lima, Peru</p>
-                <p>Phone: (01) 234-5678</p>
-                <p>Email: info@techhub.com</p>
+                <p>Lima, Perú</p>
+                <p>Teléfono: (01) 123-4567</p>
+                <p>Email: comentarios@kanistick.com</p>
             </div>
             <div class="footer-section">
-                <h3>Connect With Us</h3>
+                <h3>Nuestras Redes</h3>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -180,6 +174,9 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -3,77 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - StyleHub</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Cartera - KaniStick</title>
+    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">StyleHub</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="catalog.html">Catalog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li>
-                <a href="cart.html" class="cart-icon active">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
-                </a>
-            </li>
-        </ul>
+    <div class="animated-bg"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">KaniStick</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Catálogo</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li>
+                    <a href="#" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
+    <header class="hero">
+        <div class="hero-content">
+            <h1>CARRITO DE COMPRAS</h1>
+            <p>Revisa tus productos seleccionados</p>
+        </div>
+    </header>
+
     <main class="cart-container">
-        <h1>Shopping Cart</h1>
         <div class="cart-content">
             <div class="cart-items" id="cart-items">
-                <!-- Cart items will be dynamically loaded here -->
+                <!-- Ejemplo de items en el carrito -->
+                <div class="cart-item">
+                    <img src="img/8.jpg" alt="Producto" class="item-image">
+                    <div class="product-card">
+                        <div class="product-badge">Nuevo</div>
+                        <h3>Pro Gaming Laptop</h3>
+                        <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD - Rendimiento extremo</p>
+                        <p class="product-price">$2,499.99</p>
+                    </div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                        <input type="text" class="quantity-input" value="2" readonly>
+                        <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                    </div>
+                    <button class="remove-item" onclick="removeItem()">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+
+                <div class="cart-item">
+                    <img src="img/5.jpg" alt="Producto" class="item-image">
+                    <div class="product-card">
+                        <div class="product-badge">Nuevo</div>
+                        <h3>Mouse Gaming RGB</h3>
+                        <p class="product-description">16000 DPI, 8 Botones Programables - Precisión máxima</p>
+                        <p class="product-price">$79.99</p>
+                    </div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                        <input type="text" class="quantity-input" value="1" readonly>
+                        <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                    </div>
+                    <button class="remove-item" onclick="removeItem()">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+
+                <div class="cart-item">
+                    <img src="img/7.jpg" alt="Producto" class="item-image">
+                    <div class="product-card">
+                        <h3>Monitor UltraWide 29"</h3>
+                        <p class="product-description">2560x1080, 144Hz, 1ms Response - Inmersión total</p>
+                        <p class="product-price">$399.99</p>
+                    </div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                        <input type="text" class="quantity-input" value="1" readonly>
+                        <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                    </div>
+                    <button class="remove-item" onclick="removeItem()">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
             </div>
+
             <div class="cart-summary">
-                <h3>Order Summary</h3>
+                <h3>Resumen del Pedido</h3>
                 <div class="summary-item">
                     <span>Subtotal:</span>
-                    <span id="subtotal">$0.00</span>
+                    <span id="subtotal">$2.977.00</span>
                 </div>
                 <div class="summary-item">
-                    <span>Shipping:</span>
+                    <span>Envío:</span>
                     <span id="shipping">$5.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Descuentos:</span>
+                    <span style="color: var(--accent);">-$10.00</span>
                 </div>
                 <div class="summary-item total">
                     <span>Total:</span>
-                    <span id="total">$0.00</span>
+                    <span id="total">$2.947,23</span>
                 </div>
-                <button class="checkout-btn">Proceed to Checkout</button>
+                <button class="checkout-btn">
+                    <i class="fas fa-credit-card" style="margin-right: 0.5rem;"></i>
+                    Proceder a la Compra
+                </button>
             </div>
         </div>
+
     </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <p>StyleHub brings you the latest fashion trends with quality and style.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="catalog.html">Shop</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect With Us</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
     <script src="js/main.js"></script>
     <script src="js/cart.js"></script>
 </body>
