@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "nombre": "Laptop Pro 15'",
+    "precio": 3200,
+    "imagen": "img/product1.jpg",
+    "categoria": "laptops"
+  },
+  {
+    "id": 2,
+    "nombre": "Mouse Gamer RGB",
+    "precio": 120,
+    "imagen": "img/mouse.jpg",
+    "categoria": "gaming"
+  },
+  {
+    "id": 3,
+    "nombre": "Teclado Mecánico",
+    "precio": 280,
+    "imagen": "img/teclado.jpg",
+    "categoria": "peripherals"
+  },
+  {
+    "id": 4,
+    "nombre": "Monitor 27\" 144Hz",
+    "precio": 980,
+    "imagen": "img/monitor.jpg",
+    "categoria": "monitors"
+  },
+  {
+    "id": 5,
+    "nombre": "Tablet X10",
+    "precio": 899,
+    "imagen": "img/tablet.jpg",
+    "categoria": "tablets"
+  },
+  {
+    "id": 6,
+    "nombre": "Mouse Inalámbrico",
+    "precio": 1681,
+    "imagen": "img/mouseina.jpg",
+    "categoria": "peripherals"
+  },
+  {
+    "id": 7,
+    "nombre": "Teclado Gamer RGB",
+    "precio": 3171,
+    "imagen": "img/product2.jpg",
+    "categoria": "peripherals"
+  },
+  {
+    "id": 8,
+    "nombre": "Silla Ergonómica",
+    "precio": 2282,
+    "imagen": "img/product3.jpg",
+    "categoria": "components"
+  },
+  {
+    "id": 9,
+    "nombre": "Cámara Full HD",
+    "precio": 1778,
+    "imagen": "img/product4.jpg",
+    "categoria": "security"
+  },
+  {
+    "id": 10,
+    "nombre": "Disco SSD 1TB",
+    "precio": 1488,
+    "imagen": "img/product5.jpg",
+    "categoria": "components"
+  },
+  {
+    "id": 11,
+    "nombre": "Memoria RAM 16GB",
+    "precio": 2460,
+    "imagen": "img/product6.jpg",
+    "categoria": "components"
+  },
+  {
+    "id": 12,
+    "nombre": "Procesador i7",
+    "precio": 1210,
+    "imagen": "img/product7.jpg",
+    "categoria": "components"
+  },
+  {
+    "id": 13,
+    "nombre": "Tarjeta Gráfica RTX 3060",
+    "precio": 3070,
+    "imagen": "img/product8.jpg",
+    "categoria": "components"
+  },
+  {
+    "id": 14,
+    "nombre": "Placa Madre B550",
+    "precio": 2359,
+    "imagen": "img/product9.jpg",
+    "categoria": "components"
+  },
+  {
+    "id": 15,
+    "nombre": "Fuente 650W",
+    "precio": 1495,
+    "imagen": "img/product10.jpg",
+    "categoria": "components"
+  },
+  {
+    "id": 16,
+    "nombre": "Laptop Gamer 17\"",
+    "precio": 1910,
+    "imagen": "img/product11.jpg",
+    "categoria": "laptops"
+  },
+  {
+    "id": 17,
+    "nombre": "Impresora Multifunción",
+    "precio": 527,
+    "imagen": "img/product12.jpg",
+    "categoria": "printers"
+  },
+  {
+    "id": 18,
+    "nombre": "Tablet Kids",
+    "precio": 2653,
+    "imagen": "img/product13.jpg",
+    "categoria": "tablets"
+  },
+  {
+    "id": 19,
+    "nombre": "Auriculares Bluetooth",
+    "precio": 791,
+    "imagen": "img/product14.jpg",
+    "categoria": "peripherals"
+  },
+  {
+    "id": 20,
+    "nombre": "Cargador Universal",
+    "precio": 777,
+    "imagen": "img/product15.jpg",
+    "categoria": "peripherals"
+  }
+]

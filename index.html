@@ -1,182 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Llevate lo ultimo en tecnología</title>
-    <link rel="icon" href="img/logo.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KaniStick - Bienvenido</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="animated-bg"></div>
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">KaniStick</a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="catalog.html">Catálogo</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-                    <a href="cart.html" class="cart-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Fondo animado -->
+  <div class="animated-bg"></div>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Bienvenido a KaniStick</h1>
-            <p>Tu destino tecnológico definitivo - Periféricos gaming de última generación</p>
-            <a href="catalog.html" class="cta-button">¡Explora Ahora!</a>
-        </div>
-    </header>
-
-    <div class="category-filter">
-        <select id="category-select" class="category-dropdown">
-            <option value="">Todas las Categorías</option>
-            <option value="laptops">Laptops Gaming</option>
-            <option value="gaming">Zona Gaming</option>
-            <option value="printers">Impresoras</option>
-            <option value="components">Componentes PC</option>
-            <option value="peripherals">Periféricos</option>
-            <option value="monitors">Monitores</option>
-            <option value="supplies">Accesorios</option>
-            <option value="tablets">Tablets</option>
-            <option value="security">Seguridad</option>
-        </select>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">KaniStick</a>
+      <ul class="nav-links">
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="catalog.html">Catálogo</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+      <a href="cart.html" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+      </a>
     </div>
+  </nav>
 
-    <section class="featured-products" id="catalog">
-        <h2>Productos Destacados</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-badge">Nuevo</div>
-                <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&h=300&fit=crop" alt="Gaming Laptop">
-                <h3>Pro Gaming Laptop</h3>
-                <p class="product-description">RTX 4080, 32GB RAM, 1TB NVMe SSD - Rendimiento extremo</p>
-                <p class="product-price">$2,499.99</p>
-                <button class="add-to-cart-btn" onclick="addToCart('Pro Gaming Laptop', 2499.99)">
-                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
-                </button>
-            </div>
+  <!-- Hero Bienvenida -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>¡Bienvenido a <strong>KaniStick</strong>!</h1>
+      <p>Tu tienda digital de periféricos, componentes y tecnología de calidad.</p>
+      <a href="#productos" class="cta-button">Explorar productos</a>
+    </div>
+  </header>
 
-            <div class="product-card">
-                <div class="product-badge">Popular</div>
-                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&h=300&fit=crop" alt="UltraWide Monitor">
-                <h3>Monitor UltraWide 29"</h3>
-                <p class="product-description">2560x1080, 144Hz, 1ms Response - Inmersión total</p>
-                <p class="product-price">$399.99</p>
-                <button class="add-to-cart-btn" onclick="addToCart('Monitor UltraWide 29', 399.99)">
-                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
-                </button>
-            </div>
+  <!-- Quiénes somos -->
+  <section class="about">
+    <div class="about-container">
+      <h2>¿Quiénes somos?</h2>
+      <p>Somos una empresa peruana dedicada a la venta de productos tecnológicos de última generación. Desde 2020, trabajamos para ofrecer a nuestros clientes los mejores periféricos, laptops, impresoras y más.</p>
+      <p><strong>Ubicación:</strong> Lima, Perú</p>
+    </div>
+  </section>
 
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=400&h=300&fit=crop" alt="RGB Gaming Mouse">
-                <h3>Mouse Gaming RGB</h3>
-                <p class="product-description">16000 DPI, 8 Botones Programables - Precisión máxima</p>
-                <p class="product-price">$79.99</p>
-                <button class="add-to-cart-btn" onclick="addToCart('Mouse Gaming RGB', 79.99)">
-                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
-                </button>
-            </div>
+  <!-- Productos -->
+  <section class="products" id="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="filter-bar">
+      <select id="category-select" onchange="filterProducts()">
+        <option value="">Filtrar por categoría</option>
+        <option value="laptops">Laptops</option>
+        <option value="gaming">Gaming</option>
+        <option value="printers">Impresoras</option>
+        <option value="components">Componentes</option>
+        <option value="peripherals">Periféricos</option>
+        <option value="monitors">Monitores</option>
+        <option value="supplies">Accesorios</option>
+        <option value="tablets">Tablets</option>
+        <option value="security">Seguridad</option>
+      </select>
+      <select id="price-select" onchange="filterByPrice()">
+        <option value="">Ordenar por precio</option>
+        <option value="asc">Menor a mayor</option>
+        <option value="desc">Mayor a menor</option>
+      </select>
+    </div>
+    <div class="product-grid" id="product-list">
+      <!-- Productos insertados dinámicamente -->
+    </div>
+  </section>
 
-            <div class="product-card">
-                <div class="product-badge">Oferta</div>
-                <img src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=300&fit=crop" alt="Mechanical Keyboard">
-                <h3>Teclado Mecánico</h3>
-                <p class="product-description">RGB, Switches Azules - Experiencia táctil premium</p>
-                <p class="product-price">$89.99</p>
-                <button class="add-to-cart-btn" onclick="addToCart('Teclado Mecánico', 89.99)">
-                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
-                </button>
-            </div>
+  <!-- Botón subir -->
+  <button class="scroll-top" id="scrollTop">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&h=300&fit=crop" alt="Gaming Headset">
-                <h3>Headset Gaming 7.1</h3>
-                <p class="product-description">Sonido Envolvente, Cancelación de Ruido</p>
-                <p class="product-price">$129.99</p>
-                <button class="add-to-cart-btn" onclick="addToCart('Headset Gaming 7.1', 129.99)">
-                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
-                </button>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">Best Seller</div>
-                <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400&h=300&fit=crop" alt="Graphics Card">
-                <h3>RTX 4070 GPU</h3>
-                <p class="product-description">12GB GDDR6X, Ray Tracing - Gráficos de próxima generación</p>
-                <p class="product-price">$599.99</p>
-                <button class="add-to-cart-btn" onclick="addToCart('RTX 4070 GPU', 599.99)">
-                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
-                </button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&h=300&fit=crop" alt="NVMe SSD">
-                <h3>SSD NVMe 1TB</h3>
-                <p class="product-description">7000MB/s Read, PCIe 4.0 - Velocidad extrema</p>
-                <p class="product-price">$149.99</p>
-                <button class="add-to-cart-btn" onclick="addToCart('SSD NVMe 1TB', 149.99)">
-                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
-                </button>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">Nuevo</div>
-                <img src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=400&h=300&fit=crop" alt="Laser Printer">
-                <h3>Impresora Láser Color</h3>
-                <p class="product-description">Dúplex, Inalámbrica, 28ppm - Eficiencia profesional</p>
-                <p class="product-price">$299.99</p>
-                <button class="add-to-cart-btn" onclick="addToCart('Impresora Láser Color', 299.99)">
-                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Sobre Nosotros</h3>
-                <p>KaniStick es tu destino confiable para productos tecnológicos premium y asesoramiento experto. Nos comprometemos a traerte las últimas innovaciones en tecnología gaming.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Enlaces Rápidos</h3>
-                <ul>
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Términos de Servicio</a></li>
-                    <li><a href="#">Información de Envío</a></li>
-                    <li><a href="#">Devoluciones y Garantía</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Visítanos</h3>
-                <p>Av. Arequipa 123</p>
-                <p>Lima, Perú</p>
-                <p>Teléfono: (01) 123-4567</p>
-                <p>Email: comentarios@kanistick.com</p>
-            </div>
-            <div class="footer-section">
-                <h3>Nuestras Redes</h3>
-                <div class="social-links">
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>KaniStick</h3>
+        <p>Potencia tu experiencia tecnológica con productos de calidad.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
-            </div>
-        </div>
-    </footer>
+      </div>
+    </div>
+  </footer>
 
-    <button class="scroll-top" id="scrollTop">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-    <script src="js/script.js"></script>
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
 </body>
 </html>

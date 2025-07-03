@@ -1,61 +1,62 @@
-// Filter and sort functionality
+// ================= FILTERS.JS =================
+
 document.addEventListener('DOMContentLoaded', () => {
     const productGrid = document.getElementById('product-grid');
+    const sortSelect = document.getElementById('sort-select');
+    const priceRangeInput = document.querySelector('.price-range');
+    const filterCheckboxes = document.querySelectorAll('.filter-section input[type="checkbox"]');
+
+    if (!productGrid || !sortSelect || !priceRangeInput || filterCheckboxes.length === 0) {
+        console.warn('❗ Elementos de filtro no encontrados.');
+        return;
+    }
+
     let filteredProducts = [...products];
 
-    // Render products
-    function renderProducts(products) {
-        productGrid.innerHTML = products.map(product => `
+    const renderProducts = (items) => {
+        productGrid.innerHTML = items.map(product => `
             <div class="product-card fade-in">
                 <img src="${product.image}" alt="${product.name}">
                 <h3>${product.name}</h3>
                 <p class="price">$${product.price.toFixed(2)}</p>
-                <button onclick="addToCart(${product.id})" class="add-to-cart-btn">
-                    Add to Cart
-                </button>
-                <button onclick="quickView(${product.id})" class="quick-view-btn">
-                    Quick View
-                </button>
+                <button onclick="addToCart(${product.id})" class="add-to-cart-btn">Add to Cart</button>
+                <button onclick="quickView(${product.id})" class="quick-view-btn">Quick View</button>
             </div>
         `).join('');
-    }
+    };
 
-    // Filter products
-    function filterProducts() {
-        const checkedCategories = Array.from(document.querySelectorAll('.filter-section input[type="checkbox"]:checked'))
-            .map(checkbox => checkbox.value);
-        const priceRange = document.querySelector('.price-range').value;
-        const sortValue = document.getElementById('sort-select').value;
+    const filterProducts = () => {
+        const selectedCategories = Array.from(filterCheckboxes)
+            .filter(cb => cb.checked)
+            .map(cb => cb.value);
+
+        const maxPrice = parseFloat(priceRangeInput.value) || Infinity;
+        const sortValue = sortSelect.value;
 
         filteredProducts = products.filter(product => {
-            const matchesCategory = checkedCategories.length === 0 || checkedCategories.includes(product.category);
-            const matchesPrice = product.price <= priceRange;
-            return matchesCategory && matchesPrice;
+            const matchCategory = selectedCategories.length === 0 || selectedCategories.includes(product.category);
+            const matchPrice = product.price <= maxPrice;
+            return matchCategory && matchPrice;
         });
 
-        // Sort products
-        switch(sortValue) {
-            case 'price-low':
-                filteredProducts.sort((a, b) => a.price - b.price);
-                break;
-            case 'price-high':
-                filteredProducts.sort((a, b) => b.price - a.price);
-                break;
-            case 'name':
-                filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
-                break;
-        }
-
+        sortFilteredProducts(sortValue);
         renderProducts(filteredProducts);
-    }
+    };
 
-    // Add event listeners
-    document.querySelectorAll('.filter-section input').forEach(input => {
-        input.addEventListener('change', filterProducts);
-    });
+    const sortFilteredProducts = (sortValue) => {
+        const sorters = {
+            'price-low': (a, b) => a.price - b.price,
+            'price-high': (a, b) => b.price - a.price,
+            'name': (a, b) => a.name.localeCompare(b.name)
+        };
+        filteredProducts.sort(sorters[sortValue] || (() => 0));
+    };
 
-    document.getElementById('sort-select').addEventListener('change', filterProducts);
+    // Bind event listeners
+    [...filterCheckboxes, priceRangeInput, sortSelect].forEach(el =>
+        el.addEventListener('change', filterProducts)
+    );
 
-    // Initial render
+    // Inicializar
     renderProducts(products);
 });
