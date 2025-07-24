@@ -108,6 +108,40 @@
         </div>
     </footer>
 
+    <script>
+document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const data = {
+        nombre: document.getElementById('name').value,
+        correo: document.getElementById('email').value,
+        asunto: document.getElementById('subject').value,
+        mensaje: document.getElementById('message').value
+    };
+
+    try {
+        const res = await fetch('http://localhost:3000/contacto', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+
+        if (res.ok) {
+            alert('Mensaje enviado correctamente: ' + result.mensaje);
+        } else {
+            alert('Error al enviar: ' + result.error);
+        }
+    } catch (err) {
+        console.error(err);
+        alert('Hubo un problema al enviar el formulario.');
+    }
+});
+</script>
+    
     <script src="js/main.js"></script>
 </body>
 </html>

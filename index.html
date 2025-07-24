@@ -8,6 +8,7 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
   <!-- Fondo animado -->
   <div class="animated-bg"></div>
 
@@ -61,12 +62,14 @@
         <option value="tablets">Tablets</option>
         <option value="security">Seguridad</option>
       </select>
+
       <select id="price-select" onchange="filterByPrice()">
         <option value="">Ordenar por precio</option>
         <option value="asc">Menor a mayor</option>
         <option value="desc">Mayor a menor</option>
       </select>
     </div>
+
     <div class="product-grid" id="product-list">
       <!-- Productos insertados dinámicamente -->
     </div>
@@ -95,13 +98,30 @@
       <div class="footer-section">
         <h3>Síguenos</h3>
         <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- MODAL DE PRODUCTO (único y final) -->
+  <div id="modalProducto" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modal-img" src="" alt="Imagen producto" />
+      <h2 id="modal-nombre"></h2>
+      <p><strong>Marca:</strong> <span id="modal-marca"></span></p>
+      <p><strong>Precio:</strong> S/. <span id="modal-precio"></span></p>
+      <p><strong>Colores:</strong> <span id="modal-colores"></span></p>
+      <p><strong>Stock:</strong> <span id="modal-stock"></span></p>
+      <p><strong>Tamaño:</strong> <span id="modal-tamano"></span></p>
+      <p><strong>Descripción:</strong></p>
+      <p id="modal-descripcion"></p>
+      <button id="agregar-carrito">Agregar al carrito</button>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>

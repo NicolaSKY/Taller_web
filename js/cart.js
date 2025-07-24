@@ -87,3 +87,29 @@ window.addEventListener('scroll', () => {
 
 // Inicializar carrito al cargar
 renderCart();
+
+// Mostrar modal al hacer clic en "Proceder a la Compra"
+document.querySelector('.checkout-btn')?.addEventListener('click', () => {
+  document.getElementById('paymentModal').style.display = 'flex';
+});
+
+// Cerrar modal
+function closePaymentModal() {
+  document.getElementById('paymentModal').style.display = 'none';
+}
+
+// Finalizar compra
+document.getElementById('paymentForm')?.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  // Aquí podrías agregar validación o envío a backend
+  alert("✅ ¡Compra realizada con éxito!");
+
+  // Vaciar carrito
+  cart = [];
+  saveCart();
+  renderCart();
+
+  // Cerrar modal
+  closePaymentModal();
+});

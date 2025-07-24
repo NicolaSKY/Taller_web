@@ -453,3 +453,184 @@ select option {
   background-color: #45a049;
   transform: scale(1.03);
 }
+
+/* Estilo modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background-color: rgba(20, 20, 20, 0.95);
+  margin: 5% auto;
+  padding: 2rem 2.5rem;
+  border-radius: 1.5rem;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  box-shadow: 0 0 25px rgba(168, 237, 58, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: rgba(0, 0, 0, 0.781);
+}
+
+.modal-content p {
+  margin: 0.4rem 0;
+  font-size: 1.05rem;
+  color: #5230b1;
+}
+
+.modal-content .price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #bb86fc;
+}
+
+.modal-content button {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--secondary);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #5e35b1;
+}
+
+
+.modal-content img {
+  max-width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.agregar-carrito {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #0f8;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.producto {
+  width: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.producto:hover {
+  transform: scale(1.05);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  max-height: 90%;
+  overflow-y: auto;
+  position: relative;
+  border-radius: 10px;
+}
+
+#cerrar-modal {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.oculto {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+#modal-img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
